@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 const mongoose = require ("mongoose");
 
@@ -14,3 +15,9 @@ mongoose.connect(url)
     console.log(err)
 })
 
+//endpoint home
+app.get("/api", (request, response)  => {
+    response.json({
+        message: "Enpoint Home, Welcome"
+    })
+})
