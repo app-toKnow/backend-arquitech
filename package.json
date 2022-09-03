@@ -1,0 +1,25 @@
+{
+  "name": "toknow",
+  "version": "1.0.0",
+  "description": "api para red de comunicación ent",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "espress",
+    "http",
+    "api"
+  ],
+  "author": "Enrique Berdichevsky, Lesly Arias, Lorena Terrazas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
