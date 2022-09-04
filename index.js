@@ -1,23 +1,20 @@
-const { response } = require("express");
-const express = require("express");
-const mongoose = require ("mongoose");
+require('dotenv').config()
+const mongoose = require('mongoose');
+const server = require("./src/server");
 
-const app = express()
-const url = "mongodb+srv://toknow-admin:toknow123@toknow.zlfpvbh.mongodb.net/toknow"
-mongoose.connect(url)
-.then( () => {
-    console.log( "DB connected")
-    app.listen( 8080, ( request, response ) => {
-        console.log("Our server is listening")
-    })
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env
+mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`)
+.then( () =>{
+    console.log("Connected to DB")
+    server.listen( 8080, (request, response) => {
+    console.log("Our server is on")
 })
-.catch ( ( err ) => {
-    console.log(err)
+})
+.catch( (err) => {
+    console.log("There was a mistake", err)
 })
 
-//endpoint home
-app.get("/api", (request, response)  => {
-    response.json({
-        message: "Enpoint Home, Welcome"
-    })
-})
+
+
+
+
