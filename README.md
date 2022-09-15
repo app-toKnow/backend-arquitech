@@ -29,9 +29,9 @@ Side information: To use the application in a special environment use ```lorem i
 ## Authors
 ***
 Give instructions on how to collaborate with your project.
-> Lesly Arias [email](leslyfanny2@gmail.com)
-> Enrique BerdichevskyVer [email](enrique.ba@live.com.mx)
-> Lorena Terrazas [email](diseccionmexico@gmail.com)
+* Lesly Arias [email](leslyfanny2@gmail.com)
+* Enrique BerdichevskyVer [email](enrique.ba@live.com.mx)
+* Lorena Terrazas [email](diseccionmexico@gmail.com)
 ## FAQs
 ***
 A list of frequently asked questions
