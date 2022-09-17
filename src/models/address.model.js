@@ -10,13 +10,32 @@ const addressSchema = new mongoose.Schema({
         trim: true
 
     },
-    number: {
+    extNumber: {
         type: Number,
         min: 5,
         max: 13,
+        required: true,
+        trim: true
+    },
+    intNumber:{
+        type: Number,
+        required:false,
+        trim: true
+    },
+    postalCode:{
+        type: Number,
+        required:true,
+        trim: true
+    },
+    neighborhood:{
+        type:String,
+        required: true,
+        trim: true
+    },
+    state:{
+        type:String, 
         required: true
     },
-    
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
