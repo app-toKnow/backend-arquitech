@@ -17,8 +17,10 @@ const noticeSchema = new mongoose.Schema({
     image: {
         type: String
     },
-    tags: {
-        type: String
+
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
     },
     create_at: {
         type: Date, default: Date.now
@@ -27,7 +29,7 @@ const noticeSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    last_update: {
+    date_public: {
         type: Date, default: Date.now,
         required: true
     },

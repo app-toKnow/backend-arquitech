@@ -10,19 +10,19 @@ const addressSchema = new mongoose.Schema({
         trim: true
 
     },
-    extNumber: {
+    num_ext: {
         type: Number,
         min: 5,
         max: 13,
         required: true,
         trim: true
     },
-    intNumber:{
+    num_int:{
         type: Number,
         required:false,
         trim: true
     },
-    postalCode:{
+    cp:{
         type: Number,
         required:true,
         trim: true

@@ -24,15 +24,6 @@ const userSchema = new mongoose.Schema({
             trim: true
         },
     },
-
-
-    age: {
-        type: Number,
-        min: 5,
-        max: 13,
-        required: true,
-        trim: true
-    },
     date_of_birth: {
         type: Date, default: Date.now,
         required: true
@@ -41,27 +32,19 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    gener: {
+    genre: {
         type: String,
         enum: ['male', 'female'],
         required: true
     },
     image: {
         type: String
-    },
-    cell_phone:{
-        type:Number,
-        trim: true
-    },
-    phone_1: {
-        type: Number,
+    },    
+    phone: {
+        type: [Number],
         required: true,
         trim: true
-    },
-    phone_2: {
-        type: Number,
-        trim: true
-    },
+    },   
     email: {
         type: String,
         required: true,
@@ -74,6 +57,7 @@ const userSchema = new mongoose.Schema({
         ref: 'address',
         required: true
     },
+    //// se crea por automatico en Mongo//////
     create_at: {
         type: Date, default: Date.now,
         required: true
@@ -82,13 +66,19 @@ const userSchema = new mongoose.Schema({
         type: Date, default: Date.now,
         required: true
     },
-    enrollment: {
-        type: Number,
-        required: true
-    },
+    //////////////////////////////////////////
+    // //este campo 8se va a ocupar por el momento no hay con que conectar
+    // enrollment: {
+    //     type: Number,
+    //     required: true,
+    //     trim: true
+    // },
+
+    // importante hashear contraseñas
     password: {
         type: String,
-        required: true
+        required: true,
+        trim: true
     },
     group: {
         type: Schema.Types.ObjectId,
@@ -99,7 +89,7 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: 1
     },
-    permission: {
+    role: {
         type: String,
         enum: ['admin', 'teacher', 'parent']
     },
