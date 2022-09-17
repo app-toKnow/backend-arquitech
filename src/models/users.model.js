@@ -66,7 +66,7 @@ const userSchema = new mongoose.Schema({
     },
     group: {
         type: Schema.Types.ObjectId,
-        ref: 'group'
+        ref: 'Group'
     },
     status: {
         type: Boolean
