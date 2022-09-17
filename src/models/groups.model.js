@@ -2,28 +2,31 @@ import mongoose from "mongoose";
 
 const groupSchema = new mongoose.Schema({
 
-    group: {
+group: {
+    year: {
         type: Number,
         required: true,
-        trim : true 
+        trim: true
     },
+
     grade: {
         type: String,
         required: true,
-        trim : true 
-    },
-    studens: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    },
-    teachers: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    },
-    subjects: {
-        type: Schema.Types.ObjectId,
-        ref: 'Subject'
+        trim: true
     }
+},
+    studens: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+},
+    teachers: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+},
+    subjects: {
+    type: Schema.Types.ObjectId,
+    ref: 'Subject'
+}
 
 })
 
