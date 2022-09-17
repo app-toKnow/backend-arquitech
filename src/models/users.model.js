@@ -30,13 +30,14 @@ const userSchema = new mongoose.Schema({
         type: Number,
         min: 5,
         max: 13,
-        required: true
+        required: true,
+        trim: true
     },
-    dob: {
+    date_of_birth: {
         type: Date, default: Date.now,
         required: true
     },
-    pob: {
+    place_of_birh: {
         type: String,
         required: true
     },
@@ -47,6 +48,19 @@ const userSchema = new mongoose.Schema({
     },
     image: {
         type: String
+    },
+    cell_phone:{
+        type:Number,
+        trim: true
+    },
+    phone_1: {
+        type: Number,
+        required: true,
+        trim: true
+    },
+    phone_2: {
+        type: Number,
+        trim: true
     },
     email: {
         type: String,
