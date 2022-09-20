@@ -15,6 +15,7 @@ group: {
         trim: true
     }
 },
+// reflexionar si es preferible dar de alta al papá en el grupo
     studens: {
     type: Schema.Types.ObjectId,
     ref: 'User'

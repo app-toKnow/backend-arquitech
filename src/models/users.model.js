@@ -97,10 +97,7 @@ const userSchema = new mongoose.Schema({
         type: Schema.Types.ObjectId,
         ref: 'Notice'
     },
-    parents: {
-        type: Schema.Types.ObjectId,
-        ref: 'parents'
-    }
+   
 })
 
 const User = mongoose.model("users", userSchema)
