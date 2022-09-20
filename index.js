@@ -1,3 +1,5 @@
+// without node_modules
+
 require('dotenv').config()
 const mongoose = require('mongoose');
 const server = require("./src/server");
